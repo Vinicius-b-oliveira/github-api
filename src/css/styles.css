@@ -77,10 +77,11 @@ main {
   border-radius: 7px;  
   cursor: pointer;
   border: 1px solid grey;
+  transition: .2s ease-in-out;
 }
 
 .container header #btn-search:hover {
-  background-color: hotpink;
+  background-color: #3CB371;
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -109,7 +110,7 @@ main {
 .container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
-  border: 10px solid hotpink;
+  border: 10px solid #3CB371;
 }
 
 .container .profile-data .info h1{
@@ -149,18 +150,38 @@ main {
   justify-content: center;
 }
 
-.container .profile-data .repositories ul li a{
+.container .profile-data .repositories  ul li {
   padding: 20px;
   border: 1px solid grey;  
   margin: 20px;
   display: block;
   border-radius: 7px;
-  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .repositories  ul li a {
+  transition: .2s ease-in-out;
+  padding: 2px;
+  text-transform: capitalize;
 }
 
 .container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
-  color: #fff
+  color:#3CB371;
+}
+
+.container .profile-data .repositories .repo-info {
+  margin-top: 10px;
+}
+
+.container .profile-data .repositories .repo-info li {
+  margin: 5px;
+  padding: 5px;
+  background-color: #3CB371;
+  color: white;
+  cursor: default;
+}
+
+.container .profile-data .repositories .repo-info li .no-language {
+  display: inline-block;
 }
 
 .container .profile-data.hide{

@@ -22,8 +22,6 @@ const user = {
     },
 
     async setEvents (events) {
-        // const createPushEvents = events.filter(event => event.type === "PushEvent" || event.type === "CreateEvent")
-        // const selectedEvents = createPushEvents.filter(event => event.payload.commits !== undefined)
         const selectedEvents = events.filter(event => 
             event.payload.commits !== undefined && 
             (event.type === "PushEvent" || event.type === "CreateEvent")
