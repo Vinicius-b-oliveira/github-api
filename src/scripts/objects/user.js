@@ -6,8 +6,9 @@ const user = {
     following: '',
     followed: '',
     repositories: [ ],
+    events: [ ],
     
-    setInfo(gitHubUser) {
+    async setInfo(gitHubUser) {
         this.avatarUrl = gitHubUser.avatar_url
         this.name = gitHubUser.name
         this.bio = gitHubUser.bio
@@ -16,8 +17,19 @@ const user = {
         this.followers = gitHubUser.followers
     },
 
-    setRepositories(repositories) {
+    async setRepositories(repositories) {
         this.repositories = repositories
+    },
+
+    async setEvents (events) {
+        // const createPushEvents = events.filter(event => event.type === "PushEvent" || event.type === "CreateEvent")
+        // const selectedEvents = createPushEvents.filter(event => event.payload.commits !== undefined)
+        const selectedEvents = events.filter(event => 
+            event.payload.commits !== undefined && 
+            (event.type === "PushEvent" || event.type === "CreateEvent")
+        );
+        
+        this.events = selectedEvents
     }
 }
 
