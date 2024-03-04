@@ -151,11 +151,13 @@ main {
 }
 
 .container .profile-data .repositories  ul li {
+  max-width: 350px;
   padding: 20px;
   border: 1px solid grey;  
   margin: 20px;
   display: block;
   border-radius: 7px;
+  flex-grow: 1;
 }
 
 .container .profile-data .repositories  ul li a {
@@ -176,7 +178,7 @@ main {
   margin: 5px;
   padding: 5px;
   background-color: #3CB371;
-  color: white;
+  color: #fff;
   cursor: default;
 }
 
