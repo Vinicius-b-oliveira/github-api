@@ -18,11 +18,11 @@ Este é um projeto de busca de usuários usando a API do GitHub
 
 ### Print
 
-![](./solucao.png)
+![](./preview.gif)
 
 ### Links
 
-- Solução: [Ir para solução](https://vinicius-b-oliveira.github.io/github-api/)
+- Preview: [Ver preview](https://vinicius-b-oliveira.github.io/github-api/)
 
 ## Meu Processo
 
